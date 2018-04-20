@@ -1,0 +1,62 @@
+@import 'varibles';
+
+.page {
+  height: 100%;
+  padding: 3%;
+  background-color: $dark;
+}
+
+.articles {
+  background-color: $mediumDark;
+  border-radius: 15px;
+  padding: 2%;
+
+  .loadMoreBtn {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: $mediumDark;
+    border-radius: 15px;
+    padding: 1%;
+    color: $text;
+    border: none;
+    transition-duration: 0.5s;
+    font-weight: bold;
+  }
+
+  .loadMoreBtn:hover {
+    color: $accent;
+    transition-duration: 0.5s;
+  }
+}
+
+.story {
+  color: $text !important;
+  margin-bottom: 3%;
+  display: block;
+  padding: 1%;
+  transition-duration: 0.2s;
+  border-radius: 15px;
+  text-decoration: none!important;
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+
+    span {
+      color: $accent;
+      font-size: 0.7em;
+    }
+  }
+
+  p {
+    color: $accent;
+    font-size: 1em;
+  }
+}
+
+.story:hover {
+  background-color: $dark;
+  transition-duration: 0.2s;
+}
