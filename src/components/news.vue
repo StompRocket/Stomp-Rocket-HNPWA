@@ -41,6 +41,27 @@ export default {
         console.log(err)
         //error block
       })
+
+    window.onfocus = () => {
+      fetch(`https://api.hnpwa.com/v0/${this.mode}/1.json`, {
+
+          method: 'get'
+
+        }).then((response) => {
+          return response.json()
+        })
+        .then(jsonData => {
+          console.log(jsonData);
+          this.stories = jsonData
+          this.busy = false
+          this.loadmoreText = 'Load More'
+
+        }).catch(err => {
+          console.log(err)
+          //error block
+        })
+    }
+
     this.$parent.$on('refresh', (mode) => {
       this.busy = true
       this.loadmoreText = 'Loading'
