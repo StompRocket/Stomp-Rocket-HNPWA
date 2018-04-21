@@ -1,4 +1,11 @@
 @import 'varibles';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body,
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
 
 .page {
   height: 100%;
@@ -6,9 +13,18 @@
   background-color: $dark;
 }
 
+nav {
+  background-color: $mediumDark!important;
+  color: $accentTwo;
+
+  .navbar-brand {
+    color: $text;
+  }
+}
+
 #app,
 main {
-  height: 100%;
+  min-height: 100vh;
   background-color: $dark;
 }
 
@@ -51,6 +67,7 @@ main {
 
     h2 {
       margin-top: 0;
+      margin-bottom: 5%;
       color: $accent;
       font-size: 1.5em;
     }
@@ -69,16 +86,28 @@ main {
   h2 {
     font-size: 1.5em;
     margin-bottom: 0;
+    font-weight: 700;
+    @media (max-width: 450px) {
+      font-size: 1.2em;
+    }
 
     span {
       color: $accent;
       font-size: 0.7em;
+      font-weight: bold;
+      @media (max-width: 450px) {
+        font-size: 0.7em;
+      }
     }
   }
 
   p {
-    color: $accent;
+    color: $accentTwo;
     font-size: 1em;
+    font-weight: 100;
+    @media (max-width: 450px) {
+      font-size: 0.7em;
+    }
   }
 }
 

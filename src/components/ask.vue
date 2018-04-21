@@ -1,9 +1,9 @@
 <template>
 <div id="ask" class="page">
   <div class="contianer">
-    <h1>Title</h1>
-    <h2>By: </h2>
-    <p>Content</p>
+    <h1>{{this.data.title}}</h1>
+    <h2>By: {{this.data.user}} {{this.data.time_ago}} </h2>
+    <p v-html="this.data.content"></p>
   </div>
 
 </div>
@@ -18,7 +18,7 @@ export default {
     story
   },
   data: () => ({
-    stories: {},
+    data: {},
     pageNumber: 1,
     busy: true,
     loadmoreText: 'Loading'
@@ -33,7 +33,7 @@ export default {
       })
       .then(jsonData => {
         //console.log(jsonData);
-        this.stories = jsonData
+        this.data = jsonData
         this.busy = false
         this.loadmoreText = 'Load More'
 
