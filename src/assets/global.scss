@@ -6,6 +6,12 @@
   background-color: $dark;
 }
 
+#app,
+main {
+  height: 100%;
+  background-color: $dark;
+}
+
 .articles {
   background-color: $mediumDark;
   border-radius: 15px;
@@ -28,6 +34,26 @@
   .loadMoreBtn:hover {
     color: $accent;
     transition-duration: 0.5s;
+  }
+}
+
+#ask {
+  .contianer {
+    border-radius: 15px;
+    padding: 2%;
+    color: $text;
+    background-color: $mediumDark;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: $accent;
+      font-size: 1.5em;
+    }
   }
 }
 

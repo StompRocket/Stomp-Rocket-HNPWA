@@ -32,7 +32,7 @@ export default {
         return response.json()
       })
       .then(jsonData => {
-        console.log(jsonData);
+        //console.log(jsonData);
         this.stories = jsonData
         this.busy = false
         this.loadmoreText = 'Load More'
@@ -53,7 +53,7 @@ export default {
           return response.json()
         })
         .then(jsonData => {
-          console.log(jsonData);
+          //  console.log(jsonData);
           this.stories = jsonData
           this.busy = false
           this.loadmoreText = 'Load More'

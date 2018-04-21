@@ -51,7 +51,7 @@ export default {
     refresh(path) {
       this.mode = path
       this.$router.push({
-        path: path,
+        path: '/' + path,
         props: {
           mode: path
         }
